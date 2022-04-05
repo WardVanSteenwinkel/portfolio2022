@@ -1,0 +1,40 @@
+:root{
+    --gradient: linear-gradient(
+        45deg,
+        #000000,
+        #070B34
+    )
+}
+
+@keyframes bg-animation {
+    0%{
+        background-position: left;
+    }
+    100%{
+        background-position: right;
+    }
+}
+
+body{
+    background-image: var(--gradient);
+    animation: bg-animation 5s infinite alternate;
+    background-size: 400%;
+}
+
+.star{
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    background-color: white;
+    opacity: 0.6;
+    display: inline-block;
+    margin: 60px;
+}
+
+.star:hover{
+    height: 7px;
+    width: 7px;
+    border-radius: 50%;
+    opacity: 1;
+}
+
