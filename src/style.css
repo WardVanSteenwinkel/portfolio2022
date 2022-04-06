@@ -21,20 +21,17 @@ body{
     background-size: 400%;
 }
 
-.star{
-    height: 5px;
-    width: 5px;
+.stars{
     border-radius: 50%;
     background-color: white;
     opacity: 0.6;
-    display: inline-block;
-    margin: 60px;
+    position: fixed;
 }
 
-.star:hover{
-    height: 7px;
-    width: 7px;
-    border-radius: 50%;
-    opacity: 1;
-}
+/*.star:hover{*/
+/*    height: 7px;*/
+/*    width: 7px;*/
+/*    border-radius: 50%;*/
+/*    opacity: 1;*/
+/*}*/
 

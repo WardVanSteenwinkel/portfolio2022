@@ -6,28 +6,30 @@
     <title>Homepage</title>
 </head>
 <body>
-    <div id="stars">
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-        <div class="star"></div>
-    </div>
+
 </body>
 <script>
-    let starsLenght = document.getElementById("stars").children.length;
 
-    function getRandomInt(min, max) {
-        min = Math.ceil(min);
-        max = Math.floor(max);
-        return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
+    function starGenerator(){
+        this.obj = document.createElement("div");
+        this.obj.classList.add("stars");
+        this.obj.style.top = (window.innerHeight * Math.random()) + 'px';
+        this.obj.style.left = (window.innerWidth * Math.random()) + 'px';
+        this.size = randomIntBetweenInterval(3, 6);
+        this.obj.style.width = (this.size) + 'px';
+        this.obj.style.height = (this.size) + 'px';
+        document.body.appendChild(this.obj);
     }
 
+    let stars = [];
+    for (let i = 0; i < 300; i++) {
+        stars.push(new starGenerator());
+    }
+
+
+    function randomIntBetweenInterval(min, max) { // min and max included
+        return Math.floor(Math.random() * (max - min + 1) + min)
+    }
 
 
 </script>
