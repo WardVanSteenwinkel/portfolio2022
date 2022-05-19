@@ -11,15 +11,22 @@
 <body>
     <div>
         <h1 id="helloThere">Hello There!</h1>
-        <h1 id="part2">All the answers lie in the stars...</h1>
+        <h1 style="text-align: center" id="part2">All the answers lie in the stars...</h1>
     </div>
     <div  class="pages">
-        <span class="star"></span>
+        <div id="about"></div>
     </div>
 
     <div class="clouds"></div>
 </body>
 <script>
+
+    const aboutPage = document.getElementById("about")
+    aboutPage.addEventListener("click", about);
+
+    function about(){
+        window.location.href = "about.html"
+    }
 
     function starGenerator(){
         this.obj = document.createElement("div");
